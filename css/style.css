@@ -20,6 +20,7 @@ a:hover { text-decoration: underline; }
 .site-header .nav-wrap { display:flex; align-items:center; justify-content:space-between; padding:1rem 0; }
 .site-header .logo { display:inline-grid; place-items:center; width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#2563eb,#1d4ed8); color:white; font-weight:800; text-decoration:none; }
 .site-nav { display:flex; gap:1rem; align-items:center; }
+.menu-toggle { display: none; background: transparent; border: 0; color: #cfe7ff; font-size: 1.4rem; }
 .site-nav a { color:#cfe7ff; padding:0.4rem 0.6rem; border-radius:8px; text-decoration:none; font-weight:600; }
 .site-nav a:hover { background: rgba(255,255,255,0.03); }
 .hero-section { padding: 4rem 0 2rem; background: radial-gradient(circle at top, rgba(37,99,235,0.12), transparent 40%), linear-gradient(180deg, rgba(15,23,42,0.98), rgba(9,22,53,0.9)); border-bottom: 1px solid rgba(255,255,255,0.02); }
@@ -77,10 +78,6 @@ a:hover { text-decoration: underline; }
 .project-card img { width:100%; display:block; border-radius:10px; margin-bottom:0.9rem; }
 .project-link { text-decoration:none; color:inherit; display:block; }
 
-
-/* placeholder thumbnail */
-.project-card::before { content: ""; display:block; height:120px; border-radius:10px; margin-bottom:0.9rem; background: linear-gradient(135deg, rgba(37,99,235,0.16), rgba(29,78,216,0.12)); box-shadow: inset 0 -6px 24px rgba(0,0,0,0.25); }
-
 /* Footer */
 .site-footer { padding: 2rem 0; border-top:1px solid rgba(255,255,255,0.02); margin-top:2rem; }
 .footer-inner { display:flex; justify-content:space-between; gap:1rem; align-items:center; }
@@ -109,4 +106,9 @@ body::after {
 .contact-form-wrap input, .contact-form-wrap textarea { padding:0.75rem 0.9rem; border-radius:10px; border:1px solid rgba(255,255,255,0.06); background: rgba(3,7,18,0.6); color: #e6eefc; }
 .contact-form-wrap label { display:block; font-weight:600; color:var(--muted); }
 #form-status { margin-left:0.8rem; color:var(--muted); font-weight:600; }
+
+.contact-form-wrap .form-row { display:block; }
+.contact-form-wrap label { display:block; }
+.contact-form-wrap input, .contact-form-wrap textarea { width:100%; box-sizing:border-box; }
+.contact-form-wrap button { width: auto; }
 

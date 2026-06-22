@@ -41,6 +41,15 @@ document.addEventListener('DOMContentLoaded', function(){
       const open = siteNav.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    // Close mobile nav when a link is clicked
+    document.querySelectorAll('.site-nav a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        if(siteNav.classList.contains('open')){
+          siteNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded','false');
+        }
+      });
+    });
   }
 
   // Scroll progress bar (small thin indicator)
