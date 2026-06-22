@@ -1,0 +1,15 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff7300;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#grad3)" rx="20"/>
+  <g fill="white">
+    <rect x="40" y="60" width="30" height="70" rx="3"/>
+    <rect x="85" y="50" width="30" height="80" rx="3"/>
+    <rect x="130" y="70" width="30" height="60" rx="3"/>
+  </g>
+  <text x="50%" y="155" font-size="16" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">AWS</text>
+</svg>

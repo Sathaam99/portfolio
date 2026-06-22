@@ -34,9 +34,16 @@ a:hover { text-decoration: underline; }
 .btn-secondary { background: rgba(255,255,255,0.12); color: #dbeafe; }
 .btn:hover { transform: translateY(-2px); }
 .btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: #cfe7ff; }
-.hero-photo-card { position: relative; padding: 1.25rem; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(96,165,250,0.06); border-radius: 24px; backdrop-filter: blur(8px); display: grid; gap: 1rem; }
-.profile-photo { width: 100%; border-radius: 16px; border: 3px solid rgba(96, 165, 250, 0.18); box-shadow: 0 18px 40px rgba(3,7,18,0.6); transform: translateZ(0); transition: transform 0.35s ease, box-shadow 0.35s ease; }
-.profile-photo:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 36px 80px rgba(3,7,18,0.6); }
+
+@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+@keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(37,99,235,0.3), 0 24px 60px rgba(3,7,18,0.5); } 50% { box-shadow: 0 0 40px rgba(37,99,235,0.5), 0 32px 100px rgba(37,99,235,0.2); } }
+
+.hero-photo-card { position: relative; padding: 1.25rem; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(96,165,250,0.06); border-radius: 24px; backdrop-filter: blur(8px); display: grid; gap: 1rem; overflow: hidden; }
+.hero-photo-card::before { content: ''; position: absolute; inset: -8px; border-radius: 20px; background: conic-gradient(from 0deg, #2563eb, #1d4ed8, #2563eb); opacity: 0.15; filter: blur(8px); animation: glow-pulse 4s ease-in-out infinite; z-index: 0; pointer-events: none; }
+.hero-photo-card > * { position: relative; z-index: 1; }
+
+.profile-photo { width: auto; max-width: 100%; height: auto; display: block; border-radius: 16px; border: 3px solid rgba(96, 165, 250, 0.25); box-shadow: 0 0 30px rgba(37,99,235,0.25), 0 24px 60px rgba(3,7,18,0.5), inset 0 1px 0 rgba(255,255,255,0.1); animation: float 4s ease-in-out infinite; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+.profile-photo:hover { transform: translateY(-8px) scale(1.05); box-shadow: 0 0 50px rgba(37,99,235,0.4), 0 40px 120px rgba(37,99,235,0.25), inset 0 1px 0 rgba(255,255,255,0.15); border-color: rgba(96, 165, 250, 0.45); }
 .stats-card { display: grid; gap: 1rem; margin-top: 1.5rem; }
 .stats-card div { padding: 1rem 1.25rem; background: rgba(15,23,42,0.9); border: 1px solid rgba(96,165,250,0.18); border-radius: 20px; }
 .stats-card strong { display: block; font-size: 1.4rem; }
@@ -75,7 +82,7 @@ a:hover { text-decoration: underline; }
 
 .project-card { padding:1.25rem; border-radius:14px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(96,165,250,0.06); box-shadow: 0 20px 40px rgba(2,6,23,0.45); transition: transform 0.18s ease; }
 .project-card:hover { transform: translateY(-6px); }
-.project-card img { width:100%; display:block; border-radius:10px; margin-bottom:0.9rem; }
+.project-card img { width:100%; height: 180px; object-fit: cover; display:block; border-radius:10px; margin-bottom:0.9rem; background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(29,78,216,0.1)); }
 .project-link { text-decoration:none; color:inherit; display:block; }
 
 /* Footer */
