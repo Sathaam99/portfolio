@@ -62,21 +62,23 @@ document.addEventListener('DOMContentLoaded', function(){
     prog.style.width = pct + '%';
   }, {passive:true});
 
-  // Contact form submission (Formspree placeholder)
+  // Contact form submission (Web3Forms)
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   if(form){
     form.addEventListener('submit', async (e)=>{
       e.preventDefault();
+      status.textContent = 'Sending message...';
       const endpoint = form.getAttribute('action');
       const data = new FormData(form);
       try{
         const res = await fetch(endpoint, {method:'POST', body: data, headers: {'Accept':'application/json'}});
-        if(res.ok){
+        const result = await res.json();
+        if(res.ok && result.success){
           status.textContent = 'Message sent — thank you!';
           form.reset();
         } else {
-          status.textContent = 'Unable to send — please try mailto:';
+          status.textContent = result.message || 'Unable to send — please try mailto:';
         }
       } catch(err){
         status.textContent = 'Network error — try again later.';
