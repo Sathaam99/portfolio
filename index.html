@@ -72,7 +72,7 @@
           </div>
           <div class="feature-card">
             <h3>Quality</h3>
-            <p>Playwright QE frameworks, Parasoft service virtualization, and test automation.</p>
+            <p>Playwright test automation, SonarQube code quality checks and CI/CD quality gates, plus Parasoft service virtualization.</p>
           </div>
         </div>
       </section>
@@ -115,46 +115,67 @@
 
       <section id="projects" class="section">
         <h2>Projects</h2>
+        <p class="section-intro">Selected engineering work delivering reliable releases, faster feedback, and secure cloud operations.</p>
         <div class="projects-grid">
-          <article class="project-card">
-            <img src="images/projects/playwright-logo.svg" alt="Playwright project" />
-            <h3>Playwright QE Automation Framework</h3>
-            <p>Architected and deployed a scalable QE automation framework leveraging Playwright with real-time quality
-              gates integrated into Jenkins CI/CD pipelines. Integrated Harness Continuous Testing to reduce manual regression cycles from 3 days to approximately 4 hours.</p>
+          <article class="project-card project-playwright">
+            <div class="project-brand"><img src="images/projects/playwright-brand.svg" alt="Playwright logo" width="160" height="76" loading="lazy" /></div>
+            <div class="project-body">
+              <p class="project-category">QUALITY ENGINEERING</p>
+              <h3>Playwright QE Automation Framework</h3>
+              <p>Reduced regression cycles from 3 days to ~4 hours by integrating a scalable Playwright framework with Jenkins and Harness Continuous Testing.</p>
+              <div class="project-result"><strong>3 days → ~4 hours</strong><span>Regression cycle</span></div>
+              <ul class="project-tools" aria-label="Technologies"><li>Playwright</li><li>Jenkins</li><li>Harness CT</li></ul>
+            </div>
           </article>
-          <article class="project-card">
-            <img src="images/projects/harness-logo.svg" alt="OCP pipeline" />
-            <h3>OpenShift Pipeline Migration to Harness</h3>
-            <p>Executed end-to-end migration of OpenShift Container Platform (OCP) build and deployment pipelines from
-              Jenkins to Harness CI/CD. Standardized release workflows across delivery teams and improved deployment efficiency by approximately 35%.</p>
+          <article class="project-card project-harness">
+            <div class="project-brand"><img src="images/projects/../certifications/harness.svg" alt="Harness logo" width="160" height="76" loading="lazy" /></div>
+            <div class="project-body">
+              <p class="project-category">CONTINUOUS DELIVERY</p>
+              <h3>OpenShift Pipeline Migration to Harness</h3>
+              <p>Led the end-to-end migration of OpenShift build and deployment pipelines from Jenkins to Harness. Standardized release workflows across delivery teams.</p>
+              <div class="project-result"><strong>~35% improvement</strong><span>Deployment efficiency</span></div>
+              <ul class="project-tools" aria-label="Technologies"><li>Harness</li><li>OpenShift</li><li>Jenkins</li></ul>
+            </div>
           </article>
-          <article class="project-card">
-            <img src="images/projects/aws-logo.svg" alt="AWS observability" />
-            <h3>AWS Logging & Security Monitoring</h3>
-            <p>Built comprehensive monitoring and logging solutions using CloudWatch, Kinesis, S3, Lambda, Security Hub,
-              and Macie. Fetched unstructured logs, filtered and structured them, stored in S3 with KMS encryption, and
-              responded to security findings proactively.</p>
+          <article class="project-card project-aws">
+            <div class="project-brand"><img src="images/projects/aws-brand.svg" alt="Amazon Web Services logo" width="160" height="76" loading="lazy" /></div>
+            <div class="project-body">
+              <p class="project-category">CLOUD OPERATIONS</p>
+              <h3>AWS Logging &amp; Security Monitoring</h3>
+              <p>Structured logs from Kinesis and CloudWatch for encrypted S3 storage. Responded to Security Hub and Macie findings to strengthen cloud security.</p>
+              <div class="project-result"><strong>Monitoring + security</strong><span>Banking cloud environment</span></div>
+              <ul class="project-tools" aria-label="Technologies"><li>CloudWatch</li><li>Kinesis</li><li>S3 / KMS</li></ul>
+            </div>
           </article>
-          <article class="project-card">
-            <img src="images/projects/parasoft-logo.svg" alt="Service virtualization" />
-            <h3>API Mocking with Parasoft CALisa</h3>
-            <p>Created stubs and mock APIs using Parasoft CALisa service virtualization tool. Tested APIs with Postman,
-              enabling agile testing without dependency on external services. Accelerated QA cycles and improved test
-              reliability.</p>
+          <article class="project-card project-parasoft">
+            <div class="project-brand"><img src="images/projects/parasoft-brand.svg" alt="Parasoft logo" width="160" height="76" loading="lazy" /></div>
+            <div class="project-body">
+              <p class="project-category">SERVICE VIRTUALIZATION</p>
+              <h3>API Mocking with Parasoft CALisa</h3>
+              <p>Created mock APIs to decouple service dependencies and support parallel testing. Validated APIs with Postman throughout the delivery lifecycle.</p>
+              <div class="project-result"><strong>Independent testing</strong><span>Decoupled service dependencies</span></div>
+              <ul class="project-tools" aria-label="Technologies"><li>Parasoft / CALisa</li><li>Postman</li><li>Mock APIs</li></ul>
+            </div>
           </article>
-          <article class="project-card">
-            <img src="images/projects/cloudformation-logo.svg" alt="Infrastructure as Code" />
-            <h3>Infrastructure as Code (CloudFormation)</h3>
-            <p>Wrote infrastructure code using AWS CloudFormation to provision and manage cloud resources in a
-              declarative manner. Enabled reproducibility, scalability, and version-controlled infrastructure
-              deployments.</p>
+          <article class="project-card project-cloudformation">
+            <div class="project-brand"><img src="images/projects/aws-brand.svg" alt="Amazon Web Services logo" width="160" height="76" loading="lazy" /></div>
+            <div class="project-body">
+              <p class="project-category">INFRASTRUCTURE AS CODE</p>
+              <h3>AWS CloudFormation Automation</h3>
+              <p>Authored CloudFormation templates to provision and manage AWS resources declaratively, supporting repeatable infrastructure across environments.</p>
+              <div class="project-result"><strong>Repeatable infrastructure</strong><span>Declarative AWS provisioning</span></div>
+              <ul class="project-tools" aria-label="Technologies"><li>CloudFormation</li><li>AWS</li><li>Infrastructure as code</li></ul>
+            </div>
           </article>
-          <article class="project-card">
-            <img src="images/projects/jenkins-logo.svg" alt="CI/CD Pipelines" />
-            <h3>Multi-Environment CI/CD Pipeline Automation</h3>
-            <p>Developed and maintained 15+ Jenkins CI/CD pipelines across Dev, Test, UAT, and Production with Git integration, SonarQube quality gates, and Nexus3 artifacts.
-              Performed Git operations (push, pull, clone, merge) and triggered code pipelines. Proficient in analyzing
-              production issues and providing root cause analysis and fixes.</p>
+          <article class="project-card project-jenkins">
+            <div class="project-brand"><img src="images/projects/jenkins-brand.svg" alt="Jenkins logo" width="160" height="76" loading="lazy" /><img class="secondary-tool-logo" src="images/projects/sonarqube-brand.svg" alt="SonarQube" width="44" height="44" loading="lazy" /></div>
+            <div class="project-body">
+              <p class="project-category">RELEASE AUTOMATION</p>
+              <h3>Multi-Environment CI/CD Pipelines</h3>
+              <p>Owned 15+ Jenkins pipelines across Dev, Test, UAT, and Production. Integrated SonarQube quality checks and Nexus3 artifact management for regulated banking delivery.</p>
+              <div class="project-result"><strong>15+ pipelines</strong><span>Dev · Test · UAT · Production</span></div>
+              <ul class="project-tools" aria-label="Technologies"><li>Jenkins</li><li>SonarQube</li><li>Nexus3</li></ul>
+            </div>
           </article>
         </div>
       </section>

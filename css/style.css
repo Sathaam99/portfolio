@@ -143,3 +143,23 @@ a:focus-visible, button:focus-visible { outline: 3px solid #93c5fd; outline-offs
 @media (max-width: 1000px) { .certifications-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .certifications-grid { grid-template-columns: 1fr; } .eyebrow { letter-spacing: 0.12em; line-height: 1.7; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+
+/* Recognizable tool branding and scannable project outcomes. */
+.projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.project-card { padding: 0; overflow: hidden; border-radius: 20px; border-color: rgba(96,165,250,0.2); background: #0f172a; display: flex; flex-direction: column; }
+.project-brand { min-height: 132px; display: flex; align-items: center; justify-content: center; gap: 1.5rem; padding: 1.5rem; background: #f8fafc; border-bottom: 1px solid rgba(96,165,250,0.15); }
+.project-brand img { width: 160px; height: 76px; margin: 0; border-radius: 0; object-fit: contain; background: transparent; }
+.project-jenkins .project-brand img { width: 80px; }
+.project-brand img.secondary-tool-logo { width: 60px; height: 60px; }
+.project-parasoft .project-brand { background: #f8fafc; }
+.project-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.project-category { color: #93c5fd; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; margin: 0 0 0.75rem; }
+.project-body h3 { font-size: 1.2rem; line-height: 1.4; margin: 0 0 0.75rem; }
+.project-body > p:not(.project-category) { color: #cbd5e1; font-size: 0.95rem; margin: 0 0 1.5rem; }
+.project-result { margin-top: auto; padding: 1rem 0; border-top: 1px solid rgba(148,163,184,0.2); }
+.project-result strong { color: #e0f2fe; display: block; font-size: 1.12rem; line-height: 1.5; }
+.project-result span { color: #94a3b8; font-size: 0.8rem; }
+.project-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0; margin: 0.5rem 0 0; list-style: none; }
+.project-tools li { padding: 0.35rem 0.6rem; border-radius: 6px; background: rgba(96,165,250,0.1); color: #bfdbfe; font-size: 0.72rem; }
+@media (max-width: 1050px) { .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
